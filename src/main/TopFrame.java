@@ -11,9 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class TopFrame extends JFrame{
+public class TopFrame extends JFrame {
 
-	TopFrame(String title){
+	TopFrame(String title) {
 		setTitle(title);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(450, 600);
@@ -43,7 +43,7 @@ public class TopFrame extends JFrame{
 		btn.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
 		btn.setOpaque(true);
 		btn.setForeground(Color.WHITE);
-		btn.setBackground(new Color(81,182,255));
+		btn.setBackground(new Color(81, 182, 255));
 		btn.setBorderPainted(false);
 
 		JPanel panel = new JPanel();//テキスト
@@ -63,15 +63,13 @@ public class TopFrame extends JFrame{
 
 		//パネルの背景色
 		panel.setBackground(Color.WHITE);
-		panel2.setBackground(new Color(18,158,136));
+		panel2.setBackground(new Color(18, 158, 136));
 		panel3.setBackground(Color.WHITE);
 
-
 		Container contentPane = getContentPane();
-	    contentPane.add(panel2, BorderLayout.NORTH);
-	    contentPane.add(panel, BorderLayout.CENTER);
-	    contentPane.add(panel3, BorderLayout.SOUTH);
-
+		contentPane.add(panel2, BorderLayout.NORTH);
+		contentPane.add(panel, BorderLayout.CENTER);
+		contentPane.add(panel3, BorderLayout.SOUTH);
 
 	}
 }
