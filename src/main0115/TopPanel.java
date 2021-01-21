@@ -22,7 +22,7 @@ public class TopPanel extends JPanel{
 
 		label.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 18));
 		label.setHorizontalAlignment(JLabel.CENTER);
-		button.setPreferredSize(new Dimension(300, 50));
+		button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
 		button.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
 

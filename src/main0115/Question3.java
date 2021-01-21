@@ -1,6 +1,8 @@
 package main0115;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionListener;
@@ -20,13 +22,13 @@ public class Question3 extends JPanel{
     	setLayout(layout);
 
     	JLabel q1 = new JLabel("問題３：条件式として適切ものはどれ？");
-		JRadioButton rb = new JRadioButton("1: double d = true");
+		JRadioButton rb = new JRadioButton("1: cost = 300*1.05;");
 		rb.setActionCommand("3-1");
-		JRadioButton rb2 = new JRadioButton("2: 3");
+		JRadioButton rb2 = new JRadioButton("2: str == \"柴犬\"; ");
         rb2.setActionCommand("3-2");
-        JRadioButton rb3 = new JRadioButton("3: b + 5 < 20");
+        JRadioButton rb3 = new JRadioButton("3: b + 5 < 20;");
         rb3.setActionCommand("3-3");
-        JRadioButton rb4 = new JRadioButton("4: isNumeric = true");
+        JRadioButton rb4 = new JRadioButton("4: isNumeric = true;");
         rb4.setActionCommand("3-4");
 
         bg = new ButtonGroup();
@@ -38,6 +40,20 @@ public class Question3 extends JPanel{
         button = new JButton("解答する");
         button.setActionCommand("button4");
 
+        q1.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+		q1.setHorizontalAlignment(JLabel.CENTER);
+		rb.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
+		rb2.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
+		rb3.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
+		rb4.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
+        button.setPreferredSize(new Dimension(300, 60));
+		button.setHorizontalAlignment(JButton.CENTER);
+		button.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+
+		JPanel pLeft = new JPanel();
+
+		pLeft.setPreferredSize(new Dimension(120, 0));
+
         JPanel p = new JPanel(new GridLayout(4,1));
         p.add(rb);
         p.add(rb2);
@@ -46,6 +62,7 @@ public class Question3 extends JPanel{
         this.add(q1, BorderLayout.NORTH);
         this.add(p, BorderLayout.CENTER);
         this.add(button, BorderLayout.SOUTH);
+        this.add(pLeft, BorderLayout.WEST);
     }
 
     public void setActionListener(ActionListener l) {
