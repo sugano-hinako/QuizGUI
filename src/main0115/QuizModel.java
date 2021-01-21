@@ -21,6 +21,12 @@ public class QuizModel {
     public void judge3(String answer) {
     	if (answer.equals("3-3")) this.addCorrectAnswer();
     }
+    public void judge4(String answer) {
+    	if (answer.equals("4-1")) this.addCorrectAnswer();
+    }
+    public void judge5(String answer) {
+    	if (answer.equals("5-4")) this.addCorrectAnswer();
+    }
 
     public void reset() {
         CorrectAnswer = 0;

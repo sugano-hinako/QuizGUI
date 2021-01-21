@@ -58,6 +58,52 @@ public class QuizController {
 					QuizView.layout.show(QuizView.cardPanel, "next6");
 				}
 				break;
+			case "next5"://Q3Result
+				QuizView.layout.show(QuizView.cardPanel, "button5");
+				break;
+			case "next6"://Q3Miss
+				QuizView.layout.show(QuizView.cardPanel, "button5");
+				break;
+			case "button5"://Question4
+				quizModel.judge4(quizView.getAnswer4());
+				if(quizView.getAnswer4().equals("4-1")) {
+					QuizView.layout.show(QuizView.cardPanel, "next7");
+				}else {
+					QuizView.layout.show(QuizView.cardPanel, "next8");
+				}
+				break;
+			case "next7"://Q4Result
+				QuizView.layout.show(QuizView.cardPanel, "button6");
+				break;
+			case "next8"://Q4Miss
+				QuizView.layout.show(QuizView.cardPanel, "button6");
+				break;
+			case "button6"://Question5
+				quizModel.judge5(quizView.getAnswer5());
+				if(quizView.getAnswer5().equals("5-4")) {
+					QuizView.layout.show(QuizView.cardPanel, "next9");
+				}else {
+					QuizView.layout.show(QuizView.cardPanel, "next10");
+				}
+				break;
+			case "next9"://Q5Result
+				quizView.setResult(quizModel);
+				QuizView.layout.show(QuizView.cardPanel, "again");
+				break;
+			case "next10"://Q5Miss
+				quizView.setResult(quizModel);
+				QuizView.layout.show(QuizView.cardPanel, "again");
+				break;
+			case "again": //Result
+				quizModel.reset();
+                QuizView.layout.first(QuizView.cardPanel);
+                break;
+			case "end": //Result
+				QuizView.layout.show(QuizView.cardPanel, "ok");
+                break;
+			case "ok":
+				System.exit(0);
+				break;
 			}
 
 		}
