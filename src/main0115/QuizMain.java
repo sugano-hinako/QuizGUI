@@ -3,6 +3,7 @@ package main0115;
 import javax.swing.JFrame;
 
 public class QuizMain {
+	//branch作成
 
 	public static void main(String[] args) {
 		QuizView view = new QuizView();
