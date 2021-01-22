@@ -25,7 +25,7 @@ public class QuizView extends JFrame{
     private Q3Result q3Result;
     private Q4Result q4Result;
     private Q5Result q5Result;
-    private Q1Miss q1miss;
+//    private Q1Miss q1miss;
     private Q2Miss q2miss;
     private Q3Miss q3miss;
     private Q4Miss q4miss;
@@ -45,7 +45,7 @@ public class QuizView extends JFrame{
     	q3Result = new Q3Result(new BorderLayout());
     	q4Result = new Q4Result(new BorderLayout());
     	q5Result = new Q5Result(new BorderLayout());
-    	q1miss = new Q1Miss(new BorderLayout());
+//    	q1miss = new Q1Miss(new BorderLayout());
     	q2miss = new Q2Miss(new BorderLayout());
     	q3miss = new Q3Miss(new BorderLayout());
     	q4miss = new Q4Miss(new BorderLayout());
@@ -64,7 +64,7 @@ public class QuizView extends JFrame{
         cardPanel.add(topPanel, "button");
         cardPanel.add(q1, "button2");
         cardPanel.add(q1Result, "next");
-        cardPanel.add(q1miss, "next2");
+//        cardPanel.add(q1miss, "next2");
         cardPanel.add(q2, "button3");
         cardPanel.add(q2Result, "next3");
         cardPanel.add(q2miss, "next4");
@@ -91,7 +91,7 @@ public class QuizView extends JFrame{
     	topPanel.setActionListener(listener);
     	q1.setActionListener(listener);
     	q1Result.setActionListener(listener);
-    	q1miss.setActionListener(listener);
+//    	q1miss.setActionListener(listener);
     	q2.setActionListener(listener);
     	q2Result.setActionListener(listener);
     	q2miss.setActionListener(listener);
@@ -140,6 +140,14 @@ public class QuizView extends JFrame{
     }
     public void setResult(QuizModel model) {
         result.setLabel(model);
+    }
+
+    public boolean setJudge() {
+    	if(getAnswer().equals("1-1")) {
+    		return true;
+    	}else {
+    		return false;
+    	}
     }
 
 

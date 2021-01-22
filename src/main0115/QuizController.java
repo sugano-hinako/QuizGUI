@@ -23,12 +23,7 @@ public class QuizController {
 				break;
 			case "button2"://Question1
 				quizModel.judge(quizView.getAnswer());
-//				System.out.println(quizView.getAnswer());
-				if(quizView.getAnswer().equals("1-1")) {
-					QuizView.layout.next(QuizView.cardPanel);
-				}else {
-					QuizView.layout.show(QuizView.cardPanel, "next2");
-				}
+				QuizView.layout.next(QuizView.cardPanel);
 				break;
 			case "next"://Q1Result
 				QuizView.layout.show(QuizView.cardPanel, "button3");
