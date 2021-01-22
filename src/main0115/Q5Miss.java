@@ -1,6 +1,8 @@
 package main0115;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionListener;
@@ -17,21 +19,37 @@ public class Q5Miss extends JPanel{
     Q5Miss(LayoutManager layout){
     	setLayout(layout);
     	JLabel label = new JLabel("不正解…");
-    	JLabel blank = new JLabel(" ");
     	JLabel comment = new JLabel("<html><body>" +
-    	"正解は1です。あとで解説入れる。"
+    	"正解は1です。<br>2はsを後ろから検索して最初に登場する位置を調べる、<br>"
+    	+ "3は一部に文字列sを含むか調べる、<br>4は文字列sが最初に登場する位置を調べるメソッドです。"
     			+ "</body></html>");
     	next = new JButton("次の画面へ");
     	next.setActionCommand("next10");
 
+    	JPanel panel = new JPanel();
+    	JPanel panel2 = new JPanel();
+    	JPanel panel3 = new JPanel();
+    	JPanel panel4 = new JPanel();
+
+    	label.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+    	label.setHorizontalAlignment(JLabel.CENTER);
+    	comment.setHorizontalAlignment(JLabel.CENTER);
+    	next.setPreferredSize(new Dimension(300, 60));
+		next.setHorizontalAlignment(JButton.CENTER);
+		next.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		panel.setPreferredSize(new Dimension(50, 60));
+		panel2.setPreferredSize(new Dimension(50, 60));
+
     	JPanel p = new JPanel(new GridLayout(4,1));
-    	p.add(blank);
+    	p.add(panel3);
     	p.add(label);
     	p.add(comment);
-    	p.add(blank);
+    	p.add(panel4);
 
     	this.add(p, BorderLayout.CENTER);
         this.add(next, BorderLayout.SOUTH);
+        this.add(panel, BorderLayout.WEST);
+        this.add(panel2, BorderLayout.EAST);
     }
 
     public void setActionListener(ActionListener l) {
