@@ -1,4 +1,8 @@
-package main0115;
+package main;
+
+import controller.QuizController;
+import view.QuizView;
+import model.QuizModel;
 
 import javax.swing.JFrame;
 

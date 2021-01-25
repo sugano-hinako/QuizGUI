@@ -1,4 +1,6 @@
-package main0115;
+package view;
+
+import config.QuizConst;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -10,6 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import static config.QuizConst.GOTHIC;
+
 public class TopPanel extends JPanel{
 	private final JButton button;
 
@@ -18,13 +22,13 @@ public class TopPanel extends JPanel{
 		JLabel label = new JLabel("<html><body><b>javaのもんだいはじまるよ</b><br><br>"
 				+ "<font size=\"-1\">※全5問の4択問題です</font></body></html>");
 		button = new JButton("START!");
-		button.setActionCommand("button");
+		button.setActionCommand(QuizConst.SHOW_QUIZ);
 
-		label.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 18));
+		label.setFont(new Font(GOTHIC, Font.PLAIN, 18));
 		label.setHorizontalAlignment(JLabel.CENTER);
 		button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
-		button.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		button.setFont(new Font(GOTHIC, Font.BOLD, 15));
 
 		this.add(label, BorderLayout.CENTER);
         this.add(button, BorderLayout.SOUTH);
