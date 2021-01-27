@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -15,7 +17,7 @@ import javax.swing.JRadioButton;
 
 public class Question4 extends JPanel{
 	private final JButton button;
-    final ButtonGroup bg;
+    ButtonGroup bg;
 
     public Question4(LayoutManager layout) {
     	setLayout(layout);
@@ -30,24 +32,21 @@ public class Question4 extends JPanel{
         JRadioButton rb4 = new JRadioButton("4: メソッド");
         rb4.setActionCommand("4-4");
 
-        bg = new ButtonGroup();
-        bg.add(rb);
-        bg.add(rb2);
-        bg.add(rb3);
-        bg.add(rb4);
+        JRadioButton[] rbtns = {rb,rb2,rb3,rb4};
+        bg = setButtonGroup(rbtns);
 
         button = new JButton("解答する");
         button.setActionCommand("button5");
 
-        q1.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+        q1.setFont(new Font(GOTHIC, Font.BOLD, 18));
 		q1.setHorizontalAlignment(JLabel.CENTER);
-		rb.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
-		rb2.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
-		rb3.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
-		rb4.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 15));
+		rb.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb2.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb3.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb4.setFont(new Font(GOTHIC, Font.PLAIN, 15));
         button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
-		button.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		button.setFont(new Font(GOTHIC, Font.BOLD, 15));
 
 		JPanel pLeft = new JPanel();
 
@@ -63,7 +62,13 @@ public class Question4 extends JPanel{
         this.add(button, BorderLayout.SOUTH);
         this.add(pLeft, BorderLayout.WEST);
     }
-
+    private ButtonGroup setButtonGroup(JRadioButton[] rbtns) {
+    	bg = new ButtonGroup();
+    	for (JRadioButton rbutton : rbtns) {
+    		bg.add(rbutton);
+    	}
+    	return bg;
+    }
     public void setActionListener(ActionListener l) {
         button.addActionListener(l);
     }
