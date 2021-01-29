@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -18,6 +20,10 @@ public class Q4Miss extends JPanel{
 
     Q4Miss(LayoutManager layout){
     	setLayout(layout);
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
+    	Font fBtn = new Font(GOTHIC, Font.BOLD, 15);
+
     	JLabel label = new JLabel("不正解…");
     	JLabel comment = new JLabel("<html><body>" +
     	"正解は1です。<br>2のコンストラクタはインスタンス生成時に実行されるメソッドです、"
@@ -25,19 +31,19 @@ public class Q4Miss extends JPanel{
     	+ "4のメソッドはいくつかの処理をひとまとめにしたものです。"
     			+ "</body></html>");
     	next = new JButton("次の問題へ");
-    	next.setActionCommand("next8");
+    	next.setActionCommand(NEXT8);
 
     	JPanel panel = new JPanel();
     	JPanel panel2 = new JPanel();
     	JPanel panel3 = new JPanel();
     	JPanel panel4 = new JPanel();
 
-    	label.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+    	label.setFont(f2);
     	label.setHorizontalAlignment(JLabel.CENTER);
     	comment.setHorizontalAlignment(JLabel.CENTER);
     	next.setPreferredSize(new Dimension(300, 60));
 		next.setHorizontalAlignment(JButton.CENTER);
-		next.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		next.setFont(fBtn);
 		panel.setPreferredSize(new Dimension(50, 60));
 		panel2.setPreferredSize(new Dimension(50, 60));
 

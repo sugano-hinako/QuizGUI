@@ -22,6 +22,8 @@ public class Question5 extends JPanel{
 
     public Question5(LayoutManager layout) {
     	setLayout(layout);
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
 
     	JLabel q1 = new JLabel("<html><body>問題５：文字列sで終わるか調べるメソッドの定義で<br>正しいものはどれ？</body></html>");
 		JRadioButton rb = new JRadioButton("1: public int lastIndexOf(String s)");
@@ -37,14 +39,14 @@ public class Question5 extends JPanel{
         bg = setButtonGroup(rbtns);
 
         button = new JButton("解答する");
-        button.setActionCommand("button6");
+        button.setActionCommand(BUTTON6);
 
-        q1.setFont(new Font(GOTHIC, Font.BOLD, 18));
+        q1.setFont(f2);
 		q1.setHorizontalAlignment(JLabel.CENTER);
-		rb.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb2.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb3.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb4.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb.setFont(f);
+		rb2.setFont(f);
+		rb3.setFont(f);
+		rb4.setFont(f);
         button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
 		button.setFont(new Font(GOTHIC, Font.BOLD, 15));

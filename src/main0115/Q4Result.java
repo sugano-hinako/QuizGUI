@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -17,15 +19,19 @@ public class Q4Result extends JPanel{
 
     Q4Result(LayoutManager layout){
     	setLayout(layout);
-    	label = new JLabel("正解!");
-    	next = new JButton("次の問題へ");
-    	next.setActionCommand("next7");
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
+    	Font fBtn = new Font(GOTHIC, Font.BOLD, 15);
 
-    	label.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+    	label = new JLabel(CORRECT);
+    	next = new JButton("次の問題へ");
+    	next.setActionCommand(NEXT7);
+
+    	label.setFont(f2);
     	label.setHorizontalAlignment(JLabel.CENTER);
     	next.setPreferredSize(new Dimension(300, 60));
 		next.setHorizontalAlignment(JButton.CENTER);
-		next.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		next.setFont(fBtn);
 
     	this.add(label, BorderLayout.CENTER);
         this.add(next, BorderLayout.SOUTH);

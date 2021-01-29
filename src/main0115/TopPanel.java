@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -15,16 +17,19 @@ public class TopPanel extends JPanel{
 
 	public TopPanel(LayoutManager layout) {
 		setLayout(layout);
+		Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
+    	Font fBtn = new Font(GOTHIC, Font.BOLD, 15);
+
 		JLabel label = new JLabel("<html><body><b>javaのもんだいはじまるよ</b><br><br>"
 				+ "<font size=\"-1\">※全5問の4択問題です</font></body></html>");
 		button = new JButton("START!");
-		button.setActionCommand("button");
+		button.setActionCommand(BUTTON);
 
-		label.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 18));
+		label.setFont(f2);
 		label.setHorizontalAlignment(JLabel.CENTER);
 		button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
-		button.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		button.setFont(fBtn);
 
 		this.add(label, BorderLayout.CENTER);
         this.add(button, BorderLayout.SOUTH);

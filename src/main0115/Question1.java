@@ -18,9 +18,13 @@ import javax.swing.JRadioButton;
 public class Question1 extends JPanel{
 	private final JButton button;
     ButtonGroup bg;
+    JPanel p;
 
     public Question1(LayoutManager layout) {
     	setLayout(layout);
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
+    	Font fBtn = new Font(GOTHIC, Font.BOLD, 15);
 
     	JLabel q1 = new JLabel("問題１：整数を格納する型は？");
 		JRadioButton rb = new JRadioButton("  1 : int");
@@ -36,7 +40,7 @@ public class Question1 extends JPanel{
         bg = setButtonGroup(rbtns);
 
         button = new JButton("解答する");
-        button.setActionCommand("button2");
+        button.setActionCommand(BUTTON2);
 
         JPanel p = new JPanel(new GridLayout(4,1));
         p.add(rb);
@@ -44,15 +48,15 @@ public class Question1 extends JPanel{
         p.add(rb3);
         p.add(rb4);
 
-        q1.setFont(new Font(GOTHIC, Font.BOLD, 18));
+        q1.setFont(f2);
 		q1.setHorizontalAlignment(JLabel.CENTER);
-		rb.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb2.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb3.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb4.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb.setFont(f);
+		rb2.setFont(f);
+		rb3.setFont(f);
+		rb4.setFont(f);
         button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
-		button.setFont(new Font(GOTHIC, Font.BOLD, 15));
+		button.setFont(fBtn);
 
 		JPanel pLeft = new JPanel();
 

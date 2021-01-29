@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -18,25 +20,29 @@ public class Q5Miss extends JPanel{
 
     Q5Miss(LayoutManager layout){
     	setLayout(layout);
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
+    	Font fBtn = new Font(GOTHIC, Font.BOLD, 15);
+
     	JLabel label = new JLabel("不正解…");
     	JLabel comment = new JLabel("<html><body>" +
     	"正解は1です。<br>2はsを後ろから検索して最初に登場する位置を調べる、<br>"
     	+ "3は一部に文字列sを含むか調べる、<br>4は文字列sが最初に登場する位置を調べるメソッドです。"
     			+ "</body></html>");
     	next = new JButton("次の画面へ");
-    	next.setActionCommand("next10");
+    	next.setActionCommand(NEXT10);
 
     	JPanel panel = new JPanel();
     	JPanel panel2 = new JPanel();
     	JPanel panel3 = new JPanel();
     	JPanel panel4 = new JPanel();
 
-    	label.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 18));
+    	label.setFont(f2);
     	label.setHorizontalAlignment(JLabel.CENTER);
     	comment.setHorizontalAlignment(JLabel.CENTER);
     	next.setPreferredSize(new Dimension(300, 60));
 		next.setHorizontalAlignment(JButton.CENTER);
-		next.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 15));
+		next.setFont(fBtn);
 		panel.setPreferredSize(new Dimension(50, 60));
 		panel2.setPreferredSize(new Dimension(50, 60));
 

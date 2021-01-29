@@ -1,5 +1,7 @@
 package main0115;
 
+import static main0115.Const.*;
+
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -9,7 +11,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 
 public class QuizView extends JFrame{
 	public static JPanel cardPanel;
@@ -25,7 +26,7 @@ public class QuizView extends JFrame{
     private Q3Result q3Result;
     private Q4Result q4Result;
     private Q5Result q5Result;
-//    private Q1Miss q1miss;
+    private Q1Miss q1miss;
     private Q2Miss q2miss;
     private Q3Miss q3miss;
     private Q4Miss q4miss;
@@ -45,7 +46,7 @@ public class QuizView extends JFrame{
     	q3Result = new Q3Result(new BorderLayout());
     	q4Result = new Q4Result(new BorderLayout());
     	q5Result = new Q5Result(new BorderLayout());
-//    	q1miss = new Q1Miss(new BorderLayout());
+    	q1miss = new Q1Miss(new BorderLayout());
     	q2miss = new Q2Miss(new BorderLayout());
     	q3miss = new Q3Miss(new BorderLayout());
     	q4miss = new Q4Miss(new BorderLayout());
@@ -61,22 +62,22 @@ public class QuizView extends JFrame{
 		header.setBackground(new Color(18, 158, 136));
 		header.setPreferredSize(new Dimension(450, 40));
 
-        cardPanel.add(topPanel, "button");
-        cardPanel.add(q1, "button2");
-        cardPanel.add(q1Result, "next");
-//        cardPanel.add(q1miss, "next2");
-        cardPanel.add(q2, "button3");
-        cardPanel.add(q2Result, "next3");
-        cardPanel.add(q2miss, "next4");
-        cardPanel.add(q3, "button4");
-        cardPanel.add(q3Result, "next5");
-        cardPanel.add(q3miss, "next6");
-        cardPanel.add(q4, "button5");
-        cardPanel.add(q4Result, "next7");
-        cardPanel.add(q4miss, "next8");
-        cardPanel.add(q5, "button6");
-        cardPanel.add(q5Result, "next9");
-        cardPanel.add(q5miss, "next10");
+        cardPanel.add(topPanel, BUTTON);
+        cardPanel.add(q1, BUTTON2);
+        cardPanel.add(q1Result, NEXT);
+        cardPanel.add(q1miss, NEXT2);
+        cardPanel.add(q2, BUTTON3);
+        cardPanel.add(q2Result, NEXT3);
+        cardPanel.add(q2miss, NEXT4);
+        cardPanel.add(q3, BUTTON4);
+        cardPanel.add(q3Result, NEXT5);
+        cardPanel.add(q3miss, NEXT6);
+        cardPanel.add(q4, BUTTON5);
+        cardPanel.add(q4Result, NEXT7);
+        cardPanel.add(q4miss, NEXT8);
+        cardPanel.add(q5, BUTTON6);
+        cardPanel.add(q5Result, NEXT9);
+        cardPanel.add(q5miss, NEXT10);
         cardPanel.add(result, "again");
         cardPanel.add(exit, "ok");
 
@@ -91,7 +92,7 @@ public class QuizView extends JFrame{
     	topPanel.setActionListener(listener);
     	q1.setActionListener(listener);
     	q1Result.setActionListener(listener);
-//    	q1miss.setActionListener(listener);
+    	q1miss.setActionListener(listener);
     	q2.setActionListener(listener);
     	q2Result.setActionListener(listener);
     	q2miss.setActionListener(listener);
@@ -140,14 +141,6 @@ public class QuizView extends JFrame{
     }
     public void setResult(QuizModel model) {
         result.setLabel(model);
-    }
-
-    public boolean setJudge() {
-    	if(getAnswer().equals("1-1")) {
-    		return true;
-    	}else {
-    		return false;
-    	}
     }
 
 

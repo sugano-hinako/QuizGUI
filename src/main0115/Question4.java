@@ -21,6 +21,8 @@ public class Question4 extends JPanel{
 
     public Question4(LayoutManager layout) {
     	setLayout(layout);
+    	Font f = new Font(GOTHIC, Font.PLAIN, 15);
+    	Font f2 = new Font(GOTHIC, Font.PLAIN, 18);
 
     	JLabel q1 = new JLabel("<html><body>問題４：クラスを元に作られるオブジェクトのことを<br>何と言うでしょうか？</body></html>問題４：クラスを元に作られるオブジェクトのことを何と言うでしょうか？");
 		JRadioButton rb = new JRadioButton("1: インスタンス");
@@ -36,14 +38,14 @@ public class Question4 extends JPanel{
         bg = setButtonGroup(rbtns);
 
         button = new JButton("解答する");
-        button.setActionCommand("button5");
+        button.setActionCommand(BUTTON5);
 
-        q1.setFont(new Font(GOTHIC, Font.BOLD, 18));
+        q1.setFont(f2);
 		q1.setHorizontalAlignment(JLabel.CENTER);
-		rb.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb2.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb3.setFont(new Font(GOTHIC, Font.PLAIN, 15));
-		rb4.setFont(new Font(GOTHIC, Font.PLAIN, 15));
+		rb.setFont(f);
+		rb2.setFont(f);
+		rb3.setFont(f);
+		rb4.setFont(f);
         button.setPreferredSize(new Dimension(300, 60));
 		button.setHorizontalAlignment(JButton.CENTER);
 		button.setFont(new Font(GOTHIC, Font.BOLD, 15));
